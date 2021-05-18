@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./dist/colors.css">
+    <link rel="stylesheet" href="./css/toggle-switch.css">
 
     <title>WebApp&trade;</title>
 </head>
@@ -222,7 +222,37 @@
             <section class="settings">
                 <h3>Settings</h3>
                 <!-- custom CSS toggle code-->
+                <label class="switch-light switch-ios" onclick="">
+                    <input type="checkbox">
+
+                    <strong>
+                        Send Email Notifications
+                    </strong>
+
+                    <span>
+                        <span>Off</span>
+                        <span>On</span>
+                        <a></a>
+                    </span>
+                </label>
                 <!-- custom CSS toggle code-->
+                <label class="switch-light switch-ios" onclick="">
+                    <input type="checkbox">
+
+                    <strong>
+                        Set Profile to Public
+                    </strong>
+
+                    <span>
+                        <span>Off</span>
+                        <span>On</span>
+                        <a></a>
+                    </span>
+                </label>
+
+
+
+                <!-- form field code-->
                 <select class="form-field" id="timezone">
                     <option disabled selected>Select a Timezone</option>
                     <option>Eastern</option>

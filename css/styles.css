@@ -12,8 +12,7 @@
 body {
   height: 100vh;
 }
-h1 {
-}
+
 /* Main Sections & Grid Setup */
 
 main {
@@ -46,12 +45,27 @@ nav img {
   height: 3em;
   fill: white;
 }
-/* 60px for header, 70px for nav, 1fr for the body */
+/* 110px for header, 90px for nav, 1fr for the body */
 .grid-container {
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: 110px 90px 1fr;
+  /* grid-template-columns: 1fr;
+  grid-template-rows: 110px 90px 1fr; */
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "navigation"
+    "main";
+}
+.header {
+  grid-area: header;
+}
+.nav {
+  grid-area: navigation;
+}
+.main {
+  grid-area: main;
 }
 
 /* Content Area */
@@ -60,19 +74,13 @@ nav img {
 
 @media (min-width: 768px) {
   .grid-container {
-    grid-template-rows: 70px 75px 1fr;
+    grid-template-columns: 55px 1fr;
+    grid-template-areas:
+      "header header"
+      "navigation main";
   }
 }
 @media (min-width: 1024px) {
-  header {
-    grid-area: head;
-  }
-  nav {
-    grid-area: nav;
-  }
-  main {
-    grid-area: main;
-  }
   .grid-container {
     grid-template-columns: 80px 1fr;
     grid-template-rows: 80px 1fr;
