@@ -1,0 +1,83 @@
+/* /////////////////////////
+/* WebApp Dashboard */
+/* ////////////////////// */
+
+/* Base Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+h1 {
+}
+/* Main Sections & Grid Setup */
+
+main {
+  background-color: white;
+}
+header {
+  color: white;
+  background-color: #7477bf;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  border-radius: 50%;
+  width: 4em;
+}
+.bell-alert-icon svg {
+  width: 2.5em;
+  height: 2.5em;
+  fill: white;
+}
+nav {
+  background-color: #4d4c72;
+  text-align: center;
+  padding: 15px;
+}
+nav img {
+  width: 3em;
+  height: 3em;
+  fill: white;
+}
+/* 60px for header, 70px for nav, 1fr for the body */
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 110px 90px 1fr;
+}
+
+/* Content Area */
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-rows: 70px 75px 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    grid-area: head;
+  }
+  nav {
+    grid-area: nav;
+  }
+  main {
+    grid-area: main;
+  }
+  .grid-container {
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas:
+      "head head"
+      "nav main";
+  }
+}
