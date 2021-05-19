@@ -1,7 +1,6 @@
 const alertBanner = document.getElementById("alert");
 
-var Chart = require('chart.js');
-var myChart = new Chart(ctx, {...});
+const trafficCanvas = getElementById("myChart”);
 
 // create the html for the banner
 alertBanner.innerHTML =
