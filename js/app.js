@@ -3,6 +3,9 @@ const alertBanner = document.getElementById("alert");
 const trafficCanvas = document.getElementById("myChart");
 
 
+ 
+
+
 // create the html for the banner
 alertBanner.innerHTML =
 `
