@@ -58,13 +58,13 @@ nav img {
     "navigation"
     "main";
 }
-.header {
+header {
   grid-area: header;
 }
-.nav {
+nav {
   grid-area: navigation;
 }
-.main {
+main {
   grid-area: main;
 }
 .widget-container-full, .widget-container-half { 
@@ -72,6 +72,10 @@ nav img {
 }
 
 /* Content Area */
+
+.profile-image {
+  border-radius: 50%;
+}
 
 /* Media Queries */
 
