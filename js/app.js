@@ -1,5 +1,8 @@
 const alertBanner = document.getElementById("alert");
 
+var Chart = require('chart.js');
+var myChart = new Chart(ctx, {...});
+
 // create the html for the banner
 alertBanner.innerHTML =
 `

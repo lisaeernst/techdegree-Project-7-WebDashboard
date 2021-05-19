@@ -106,7 +106,7 @@ main {
   width: 45vw;
 }
 }
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .grid-container {
     grid-template-columns: 80px 1fr;
     grid-template-rows: 80px 1fr;
@@ -114,4 +114,4 @@ main {
       "head head"
       "nav main";
   }
-}
+} */
