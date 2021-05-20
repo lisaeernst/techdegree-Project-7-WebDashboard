@@ -1,6 +1,6 @@
 const alertBanner = document.getElementById("alert");
 
-const trafficCanvas = document.getElementById("myChart");
+const trafficCanvas = document.getElementById("trafficChart");
 
 
  
