@@ -6,13 +6,13 @@
 header color: #7477bf
 dark nav purple  #4d4c72
 lightest purple #d5d6ec
-green for links and buttons  #81c98f
+green for links and buttons  #b0ec8b
 aqua for pie chart along with button green  #51b6c8
 
 neutral grey  #f5f5f5
 
+horizontal lines and borders #solid 2px #cccccc
 */
-
 
 /* Base Styles */
 
@@ -65,12 +65,12 @@ h1.logo {
   order: 1;
 }
 .header-content {
- height: 90px;
- width: 100%;
- order: 2;
- display: flex;
- align-items: center;
- justify-content: flex-end;
+  height: 90px;
+  width: 100%;
+  order: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 div#notifications {
   border-left: solid 1px white;
@@ -102,24 +102,25 @@ nav a svg {
   width: 2.8em;
   height: 2.8em;
   fill: white;
- 
 }
 /* Content Area */
 .dashboard-header {
   width: 100%;
   height: 45px;
-  border-right: solid 2px grey;
   margin-bottom: 25px;
+  display: flex;
+  padding-left: 10px;
 }
 h2.headline {
   order: 1;
-  border-right: 1px solid grey;
+  border-right: solid 2px #cccccc;
+  padding-right: 15px;
+  padding-top: 10px;
 }
 .gray-tab {
   order: 2;
   width: 100%;
-  height: 45px;
-  border-bottom: 1px solid grey;
+  border-bottom: solid 2px #cccccc;
 }
 div#alert {
   background-color: #7477bf;
@@ -136,39 +137,46 @@ div#alert {
   align-items: center;
   justify-content: flex-start;
   align-items: center;
-  height: 40px;
+  height: 50px;
   padding-left: 5px;
   padding-right: 5px;
 }
 p.alertText {
-
-  font-size: .9em;
+  font-size: 0.9em;
   flex-grow: 1;
 }
 
-.traffic-header {
+.traffic-header h3 {
   padding-left: 18px;
 }
 ul.traffic-nav {
   margin-top: 15px;
   margin-bottom: 25px;
+  text-align: center;
 }
 li.traffic-nav-link {
   display: inline;
   font-size: 1.3em;
+  padding-right: 8px;
 }
 
 li.traffic-nav-link:hover {
-  background-color: lime;
+  background-color: #b0ec8b;
+  width: 45px;
+  border-radius: 40px;
+  padding: 10px;
+  cursor: pointer;
 }
-
-.widget-container-full, .widget-container-half { 
+li.traffic-nav-link:active {
+  background-color: #b0ec8b;
+  width: 45px;
+  border-radius: 40px;
+  padding: 10px;
+}
+.widget-container-full,
+.widget-container-half {
   width: 95vw;
 }
-
-
-
-
 
 .profile-image {
   border-radius: 50%;
@@ -190,11 +198,11 @@ li.traffic-nav-link:hover {
   nav {
     flex-direction: column;
     justify-content: flex-start;
-}
-nav a svg {
-  margin-bottom: 35px;
-}
-  .traffic,
+  }
+  nav a svg {
+    margin-bottom: 35px;
+  }
+   .traffic,
   .social {
     grid-column: 1 / span 2;
   }
