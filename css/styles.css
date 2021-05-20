@@ -26,7 +26,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-header img {
+/* header img {
   border-radius: 50%;
   width: 4em;
 }
@@ -34,7 +34,7 @@ header img {
   width: 2.5em;
   height: 2.5em;
   fill: white;
-}
+} */
 nav {
   background-color: #4d4c72;
   text-align: center;
