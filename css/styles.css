@@ -13,7 +13,7 @@ body {
   height: 100vh;
 }
 
-/* Main Sections & Grid Setup */
+/* Main Grid Setup */
 
 /* 110px for header, 90px for nav, 1fr for the body */
 .grid-container {
@@ -35,6 +35,8 @@ main {
   grid-area: main;
 }
 
+/* Header Sections */
+
 main {
   background-color: white;
 }
@@ -43,19 +45,20 @@ header {
   background-color: #7477bf;
   display: flex;
   align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 h1.logo {
   font-size: 1.2em;
   order: 1;
 }
-.right-header-content {
+.header-content {
  height: 90px;
  width: 100%;
  order: 2;
  display: flex;
  align-items: center;
+ justify-content: flex-end;
 }
 div#notifications {
   border-left: solid 1px white;
@@ -65,23 +68,45 @@ header img {
   width: 3em;
   margin-left: 10px;
 }
-g.bell-alert-icon {
-  
+.header-content svg {
   fill: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 10px;
 }
+.header-content h3 {
+  font-size: 0.9em;
+  margin-left: 8px;
+}
+
 nav {
   display: flex;
   background-color: #4d4c72;
   text-align: center;
   padding: 15px;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 nav a svg {
   width: 2.8em;
   height: 2.8em;
   fill: white;
+ 
 }
-
+/* Content Area */
+.main-header {
+  width: 45%;
+  height: 1.4%;
+  border-right: solid 2px grey;
+  margin-bottom: 25px;
+}
+div#alert {
+  background-color: #7477bf;
+  border-radius: 4px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  height: 40px;
+}
 
 
 
@@ -91,7 +116,7 @@ nav a svg {
 
 
 
-/* Content Area */
+
 
 .profile-image {
   border-radius: 50%;
@@ -110,6 +135,13 @@ nav a svg {
   .main {
     grid-template-columns: 50%;
   }
+  nav {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+nav a svg {
+  margin-bottom: 35px;
+}
   .traffic,
   .social {
     grid-column: 1 / span 2;
