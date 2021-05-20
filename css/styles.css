@@ -95,7 +95,7 @@ nav a svg {
 /* Content Area */
 .main-header {
   width: 45%;
-  height: 1.4%;
+  height: 45px;
   border-right: solid 2px grey;
   margin-bottom: 25px;
 }
