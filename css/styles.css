@@ -185,6 +185,9 @@ li.traffic-nav-link:active {
 /* Media Queries */
 
 @media (min-width: 768px) {
+  main {
+    display: grid;
+  }
   .grid-container {
     grid-template-columns: 75px 1fr;
     /* was 55px 1fr */
@@ -202,23 +205,30 @@ li.traffic-nav-link:active {
   nav a svg {
     margin-bottom: 35px;
   }
-   .traffic,
+  .traffic,
   .social {
     grid-column: 1 / span 2;
   }
-  .daily, .members, .message {
-  .daily, .members, .message { grid-column: 1 / span 1;
+  .daily,
+  .members,
+  .message {
+    grid-column: 1 / span 1;
   }
-  .mobile, .activity, .settings {
+
+  .mobile,
+  .activity,
+  .settings {
     grid-column: 2 / span 1;
   }
+
   .widget-container-full {
     width: 90vw;
+  }
+  .widget-container-half {
+    width: 45vw;
+  }
 }
-.widget-container-half {
-  width: 45vw;
-}
-}
+
 /* @media (min-width: 1024px) {
   .grid-container {
     grid-template-columns: 80px 1fr;
