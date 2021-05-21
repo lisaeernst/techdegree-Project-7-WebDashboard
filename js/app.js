@@ -105,6 +105,7 @@ const mobileData = {
 };
 
     const mobileOptions = { 
+      aspectRatio: 2.0,
         plugins: {
         legend: {
         position: 'right', 

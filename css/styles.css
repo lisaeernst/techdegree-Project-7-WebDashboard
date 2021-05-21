@@ -197,7 +197,7 @@ li.traffic-nav-link:hover {
   padding: 10px;
   cursor: pointer;
 }
-li.traffic-nav-link:active {
+.active {
   background-color: #8cc369;
   width: 45px;
   border-radius: 40px;
@@ -289,6 +289,10 @@ svg.facebook-icon {
   color: #7477bf;
   text-decoration: none;
 }
+section.members {
+  padding-right: 15px;
+  padding-left: 15px;
+}
 
 /* recent activity */
 
@@ -322,6 +326,19 @@ p.right-arrow {
   nav a svg {
     margin-bottom: 35px;
   }
+  canvas#daily-chart,
+  canvas#mobile-chart {
+    border-bottom: none;
+  }
+  canvas#trafficChart {
+    margin-bottom: 0px;
+  }
+  .daily-mobile-wrapper {
+    grid-column: 1 / span 2;
+    display: flex;
+    border-bottom: solid 2px #cccccc;
+    margin-bottom: 15px;
+  }
   .traffic,
   .social {
     grid-column: 1 / span 2;
@@ -346,6 +363,13 @@ p.right-arrow {
   }
   p.right-arrow {
     display: display;
+  }
+  .social-wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .social-container {
+    flex-basis: 30%;
   }
 }
 
