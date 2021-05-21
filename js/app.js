@@ -10,8 +10,7 @@ const trafficCanvas = document.getElementById("trafficChart");
 alertBanner.innerHTML =
 `
 <div class="alert-banner">
-<p class="alertText"><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
-to complete</p>
+<p class="alertText"><strong>Alert:</strong> You have unread messages</p>
 <p class="alert-banner-close">x</p>
 </div> `
 ;
