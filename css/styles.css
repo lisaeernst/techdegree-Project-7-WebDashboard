@@ -495,6 +495,17 @@ button#cancel:hover {
     display: flex;
     border-bottom: solid 2px #cccccc;
     margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  ul.traffic-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .alert {
+    grid-column: 1 / span 2;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .traffic,
   .social {
@@ -508,9 +519,12 @@ button#cancel:hover {
   .members {
     grid-column: 1 / span 2;
   }
-  .mobile,
+  /*  .mobile,
   .settings {
     grid-column: 2 / span 1;
+  } */
+  .settings {
+    grid-column: 1 / span 2;
   }
 
   .widget-container-full {
@@ -522,21 +536,76 @@ button#cancel:hover {
   p.right-arrow {
     display: display;
   }
+  section.message {
+    grid-column: 1 / span 2;
+  }
   .social-wrapper {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: nowrap;
   }
   .social-container {
+    width: 20%;
     flex-basis: 30%;
+  }
+  svg.twitter-icon,
+  svg.instagram-icon,
+  svg.facebook-icon {
+    height: 55px;
+  }
+  p.social-name {
+    font-size: 1.3em;
+  }
+  p.social-stat {
+    font-size: 2em;
+  }
+  .members-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  .members-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 20px;
+  }
+  /* margin-left auto pushes the date to the far right of the flex container nice trick */
+  p.date {
+    margin-left: auto;
+  }
+  section.message {
+    border-top: none;
+  }
+  section.activity {
+    border-bottom: solid 2px #cccccc;
   }
 }
 
 @media (min-width: 1024px) {
   .members {
     grid-column: 1 / span 1;
+    border-bottom: 2px solid #cccccc;
   }
   .activity {
     grid-column: 2 / span 1;
+  }
+  section.message {
+    grid-column: 1 / span 1;
+  }
+  .settings {
+    grid-column: 2 / span 1;
+  }
+  section.activity {
+    border-top: none;
+  }
+  select#timezone {
+    margin-top: 90px;
+  }
+  .activity h3 {
+    margin-top: 1px;
+  }
+  .members-text p {
+    font-size: 0.8em;
   }
 }
