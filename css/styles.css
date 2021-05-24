@@ -131,6 +131,9 @@ nav a svg {
   height: 2.8em;
   fill: white;
 }
+nav a svg:hover {
+  fill: #b0ec8b;
+}
 /* Content Area */
 .dashboard-header {
   width: 100%;
