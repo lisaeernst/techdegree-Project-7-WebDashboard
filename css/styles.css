@@ -219,6 +219,9 @@ li.traffic-nav-link:hover {
   border-radius: 40px;
   padding: 10px;
 }
+.traffic-nav-link a {
+  text-decoration: none;
+}
 .widget-container-full,
 .widget-container-half {
   /* width: 95vw; */
@@ -476,6 +479,9 @@ button#cancel:hover {
   .main {
     grid-template-columns: 50%;
   }
+  .dashboard-header {
+    grid-column: 1 / span 2;
+  }
   nav {
     flex-direction: column;
     justify-content: flex-start;
@@ -495,12 +501,25 @@ button#cancel:hover {
     display: flex;
     border-bottom: solid 2px #cccccc;
     margin-bottom: 15px;
-    margin-top: 15px;
+    /*  margin-top: 15px; */
   }
-
+  .daily {
+    border-right: solid 2px #ccc;
+  }
+  .daily h3,
+  .mobile h3 {
+    margin-top: 25px;
+  }
   ul.traffic-nav {
     display: flex;
     justify-content: flex-end;
+  }
+  li.traffic-nav-link {
+    padding-top: 15px;
+    margin-right: 25px;
+  }
+  .active {
+    width: auto;
   }
   .alert {
     grid-column: 1 / span 2;
@@ -519,10 +538,7 @@ button#cancel:hover {
   .members {
     grid-column: 1 / span 2;
   }
-  /*  .mobile,
-  .settings {
-    grid-column: 2 / span 1;
-  } */
+
   .settings {
     grid-column: 1 / span 2;
   }
@@ -533,8 +549,14 @@ button#cancel:hover {
   .widget-container-half {
     width: 45vw;
   }
+  .social {
+    margin-bottom: 0;
+  }
+
   p.right-arrow {
-    display: display;
+    display: inline-block;
+    align-self: flex-end;
+    font-size: 1.5em;
   }
   section.message {
     grid-column: 1 / span 2;
@@ -569,23 +591,42 @@ button#cancel:hover {
     flex-direction: column;
     text-align: left;
     margin-left: 20px;
+    width: 80%;
   }
+  .members h3 {
+    padding-top: 25px;
+  }
+
   /* margin-left auto pushes the date to the far right of the flex container nice trick */
   p.date {
     margin-left: auto;
   }
   section.message {
     border-top: none;
+    border-right: solid 2px #cccccc;
   }
   section.activity {
     border-bottom: solid 2px #cccccc;
   }
+  label.switch-light.switch-ios {
+    justify-content: flex-start;
+  }
+  label.switch-light.switch-ios strong {
+    margin-right: 25px;
+  }
+  .second-toggle label.switch-light.switch-ios strong {
+    margin-right: 55px;
+  }
 }
 
 @media (min-width: 1024px) {
+  .dashboard-header {
+    grid-column: 1 / span 2;
+  }
   .members {
     grid-column: 1 / span 1;
     border-bottom: 2px solid #cccccc;
+    border-right: solid 2px #cccccc;
   }
   .activity {
     grid-column: 2 / span 1;
@@ -603,9 +644,13 @@ button#cancel:hover {
     margin-top: 90px;
   }
   .activity h3 {
-    margin-top: 1px;
+    margin-top: 25px;
   }
   .members-text p {
     font-size: 0.8em;
+  }
+  section.message {
+    border-bottom: none;
+    border-right: solid 2px #cccccc;
   }
 }
