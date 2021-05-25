@@ -1,10 +1,6 @@
+
+/* Alert Banner */
 const alertBanner = document.getElementById("alert");
-
-const trafficCanvas = document.getElementById("trafficChart");
-
-
- 
-
 
 // create the html for the banner
 alertBanner.innerHTML =
@@ -17,8 +13,13 @@ alertBanner.innerHTML =
 alertBanner.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains("alert-banner-close")) {
-    alert.style.display = "none" }
+    alertBanner.style.display = "none" }
 });
+
+/* End of Alert Banner */
+
+
+const trafficCanvas = document.getElementById("trafficChart");
 
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
