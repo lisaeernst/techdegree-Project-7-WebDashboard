@@ -74,6 +74,39 @@ header {
   }
 }
 /* end of bell hover animation */
+
+/* drop down window in header with bell alert */
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  font-size: 0.8em;
+  color: rgb(85, 85, 85);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: solid 2px #8cc369;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* end of dropdown bell alert  */
+
 h1.logo {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2em;
@@ -339,7 +372,7 @@ form.widget-container {
   display: flex;
   flex-direction: column;
 }
-input#userField {
+input#userSearch {
   width: 90%;
   height: 60px;
   border-radius: 10px;
