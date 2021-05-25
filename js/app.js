@@ -21,6 +21,11 @@ alertBanner.addEventListener('click', e => {
 
 const trafficCanvas = document.getElementById("trafficChart");
 
+let hourlyL = document.getElementById('hourlyLink');
+let dailyL = document.querySelector('#dailyLink a');
+let weeklyL = document.getElementById('weeklyLink');
+let monthlyL = document.getElementById('monthlyLink');
+
 let trafficData = {
     labels: ["12-1", "1-2", "3-4", "5-6", "7-8", "9-10", "11-12"], 
     datasets: [
@@ -55,6 +60,27 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions
 });
 
+hourlyL.addEventListener('click', function(event)  {
+  event.preventDefault();
+  dailyL.classList.remove('active');
+  hourlyL.classList.add('active');
+  weeklyL.classList.remove('active');
+  monthlyL.classList.remove('active');
+  trafficChart.data.datasets[0].data = [750, 1450, 1500, 2200, 1800, 950, 1350];
+  trafficChart.data.labels = ["12-1", "1-2", "3-4", "5-6", "7-8", "9-10", "11-12"];
+  trafficChart.update();
+});
+
+dailyL.addEventListener('click', function(event)  {
+  event.preventDefault();
+  dailyL.classList.add('active');
+  hourlyL.classList.remove('active');
+  weeklyL.classList.remove('active');
+  monthlyL.classList.remove('active');
+  trafficChart.data.datasets[0].data = [1500, 1250, 1354, 1339, 1830, 1452, 1820];
+  trafficChart.data.labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  trafficChart.update();
+});
 
 
 const dailyCanvas = document.getElementById("daily-chart");
@@ -155,11 +181,14 @@ const mobileData = {
       }
       
       function load(){    
-          let checked = JSON.parse(localStorage.getItem('checkbox', 'checkbox2'));
-          let time = JSON.parse(localStorage.getItem('time'));
+          let checked = JSON.parse(localStorage.getItem('checkbox'));
+          let checked2 = JSON.parse(localStorage.getItem('checkbox2'));
+          let time = (localStorage.getItem('time'));
           document.getElementById("checkbox").checked = checked;
-          document.getElementById("checkbox2").checked = checked;
-          document.getElementById("timezone").value = time;
+          document.getElementById("checkbox2").checked = checked2;
+          if(time !== null) {
+            document.getElementById("timezone").value = time;
+          }
       }
 
         function del(){
@@ -168,3 +197,13 @@ const mobileData = {
       
       }
       load();
+
+      let bellalert = document.querySelector('.bell');
+      let dropdown = document.querySelector('.dropdown-content');
+
+      bellalert.addEventListener('click', function() {
+        dropdown.style.display = 'block';
+
+      }
+    );
+    

@@ -60,7 +60,7 @@ header {
   margin-top: -12px;
 }
 /* hover the bell icon in header when hovering */
-.bell:hover {
+.bell svg:hover {
   zoom: 120%;
   animation: swing 1s infinite ease-in-out alternate;
   transform-origin: center -20px;
@@ -103,7 +103,7 @@ header {
   background-color: #ddd;
 }
 .dropdown:hover .dropdown-content {
-  display: block;
+  /* display: block; */
 }
 /* end of dropdown bell alert  */
 
@@ -299,6 +299,10 @@ canvas#mobile-chart {
 .social-image {
   display: flex;
   margin: 0 15px 0 15px;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  background-color: #7477bf;
 }
 p.social-name {
   font-size: 1.5em;
@@ -313,10 +317,7 @@ p.social-stat {
 svg.twitter-icon,
 svg.instagram-icon,
 svg.facebook-icon {
-  border-radius: 50%;
-  height: 75px;
   fill: white;
-  background-color: #7477be;
   padding: 15px;
 }
 
