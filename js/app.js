@@ -144,3 +144,27 @@ const mobileData = {
           }
         });
 
+
+        /*  Settings local storage */
+        function save(){
+          let checkbox = document.getElementById('checkbox', 'checkbox2');
+          let time = document.getElementById('timezone');
+          localStorage.setItem('checkbox', checkbox.checked);
+          localStorage.setItem('checkbox2', checkbox2.checked);
+          localStorage.setItem('time', time.value);
+      }
+      
+      function load(){    
+          let checked = JSON.parse(localStorage.getItem('checkbox', 'checkbox2'));
+          let time = JSON.parse(localStorage.getItem('time'));
+          document.getElementById("checkbox").checked = checked;
+          document.getElementById("checkbox2").checked = checked;
+          document.getElementById("timezone").value = time;
+      }
+
+        function del(){
+          location.reload();
+          localStorage.clear()
+      
+      }
+      load();

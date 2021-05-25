@@ -332,8 +332,8 @@
 
                 <!-- custom CSS toggle code first toggle-->
                 <div class="first-toggle">
-                    <label class="switch-light switch-ios" onclick="">
-                        <input type="checkbox">
+                    <label class="switch-light switch-ios">
+                        <input type="checkbox" id="checkbox">
 
                         <strong>
                             Send Email Notifications
@@ -349,8 +349,8 @@
 
                 <!-- custom CSS toggle code second toggle-->
                 <div class="second-toggle">
-                    <label class="switch-light switch-ios" onclick="">
-                        <input type="checkbox">
+                    <label class="switch-light switch-ios">
+                        <input type="checkbox" id="checkbox2">
 
                         <strong>
                             Set Profile to Public
@@ -376,8 +376,8 @@
                 </select>
 
                 <div class="settings-button">
-                    <button class="button-primary" id="save">Save</button>
-                    <button class="button-disabled" id="cancel">Cancel</button>
+                    <button type="submit" class="button-primary" id="save" onclick="save()">Save</button>
+                    <button type="submit" class="button-disabled" id="cancel" onclick="del()">Cancel</button>
                 </div>
 
 
