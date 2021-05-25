@@ -55,6 +55,8 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions
 });
 
+
+
 const dailyCanvas = document.getElementById("daily-chart");
 
 // data for daily traffic bar chart
