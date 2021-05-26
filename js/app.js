@@ -232,4 +232,13 @@ const mobileData = {
 
       }
     );
+
+    /* close the dropdown window if the user clicks away from the drop down */
+    window.addEventListener('mouseup', function(event) {
+      let bellDropdownClose = document.querySelector('.dropdown-content');
+      if(event.target != bellDropdownClose) {
+        bellDropdownClose.style.display = "none";
+      }
+    });
     
+
