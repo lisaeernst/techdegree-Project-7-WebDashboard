@@ -34,6 +34,7 @@ let trafficData = {
           backgroundColor: 'rgb(116 119 191)',
           borderWidth: 2,
           borderColor: 'rgb(77 76 114)',
+        
          
         }
       ]
