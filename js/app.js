@@ -31,11 +31,14 @@ let trafficData = {
     datasets: [
       { 
         data: [750, 1450, 1500, 2200, 1800, 950, 1350],
-          backgroundColor: 'rgb(116 119 191)',
           borderWidth: 2,
-          borderColor: 'rgb(77 76 114)',
-        
-         
+          borderColor: 'rgb(153 156 224)',
+          lineTension: 0.3,
+          fill: {
+            target: 'origin',
+            above: 'rgb(116 119 190 / 53%)',   // Area will be mauve above the origin
+            
+          }
         }
       ]
     };
