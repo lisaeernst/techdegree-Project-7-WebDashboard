@@ -80,6 +80,7 @@ header {
 .dropdown {
   float: left;
   overflow: hidden;
+  padding-left: 25px;
 }
 .dropdown-content {
   display: none;
